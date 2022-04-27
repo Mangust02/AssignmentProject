@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace AssignmentProject
 {
@@ -19,9 +21,12 @@ namespace AssignmentProject
     /// </summary>
     public partial class LoginPage : Window
     {
+        SqlConnection conn;
         public LoginPage()
         {
             InitializeComponent();
+            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\pos\ass\AssignmentProject\PosAssignment.mdf;Integrated Security=True");
+            
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
@@ -43,6 +48,19 @@ namespace AssignmentProject
                 error1.Visibility = Visibility.Hidden;
                 error2.Visibility= Visibility.Hidden;
             }
+            conn.Open();
+            String query = "SELECT * FROM Admin where AdminID = " + username + "and Password='" + password + "'" ;
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                MessageBox.Show("Login Success");
+            }
+            else
+            {
+                MessageBox.Show("Username or Password incorrect");
+            }
+            conn.Close();
         }
     }
 }
