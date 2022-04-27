@@ -5,24 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AssignmentProject"
         mc:Ignorable="d"
-        Title="LoginPage" Height="353" Width="544">
-    <Grid Height="434" VerticalAlignment="Top">
-        <Label Content="Login" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" Height="46" Width="130" FontSize="24" FontWeight="Bold" FontFamily="Yu Gothic UI Semibold"/>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="30,113,0,0" VerticalAlignment="Top" Height="24" Width="130"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="30,193,0,0" VerticalAlignment="Top" Height="24" Width="130"/>
-        <Image HorizontalAlignment="Center" Height="129" Margin="0,19,0,0" VerticalAlignment="Top" Width="176" Source="/img/logo.jpg"/>
-        <TextBox HorizontalAlignment="Left" Margin="30,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="125" Height="21" Background="#FFD6EDDB"/>
-        <TextBox HorizontalAlignment="Left" Margin="30,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="125" Height="19" Background="#FFD6EDDB"/>
-        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="30,266,0,0" VerticalAlignment="Top" Height="34" Width="62" Background="#FFD6EDDB" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
+        Title="LoginPage" Height="410" Width="580">
+    <Grid Height="400" VerticalAlignment="Top">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="D:\pos\ass\AssignmentProject\img\loginpage.jpg"
+                AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="35,46,0,0" VerticalAlignment="Top" Foreground="White" Height="44" Width="71" FontSize="24"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="35,87,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="91"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="35,145,0,0" VerticalAlignment="Top" Foreground="White" Height="25" Width="91"/>
+        <TextBox HorizontalAlignment="Left" Margin="35,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Foreground="White">
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <PasswordBox HorizontalAlignment="Left" Margin="35,175,0,0" VerticalAlignment="Top" Width="120" Foreground="White" Password="">
+            <PasswordBox.Background>
+                <ImageBrush/>
+            </PasswordBox.Background>
+        </PasswordBox>
+        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="35,213,0,0" VerticalAlignment="Top" Height="27" Width="60" Foreground="White" BorderBrush="White">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
         </Button>
-
     </Grid>
 </Window>
