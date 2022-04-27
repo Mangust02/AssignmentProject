@@ -14,20 +14,22 @@
         <Label Content="Login" HorizontalAlignment="Left" Margin="35,46,0,0" VerticalAlignment="Top" Foreground="White" Height="44" Width="71" FontSize="24"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="35,87,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="91"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="35,145,0,0" VerticalAlignment="Top" Foreground="White" Height="25" Width="91"/>
-        <TextBox x:Name="username" HorizontalAlignment="Left" Margin="35,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Foreground="White">
+        <TextBox x:Name="usr" HorizontalAlignment="Left" Margin="35,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Foreground="White">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>
         </TextBox>
-        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="35,175,0,0" VerticalAlignment="Top" Width="120" Foreground="White" Password="">
+        <PasswordBox x:Name="pass" HorizontalAlignment="Left" Margin="35,175,0,0" VerticalAlignment="Top" Width="120" Foreground="White" Password="">
             <PasswordBox.Background>
                 <ImageBrush/>
             </PasswordBox.Background>
         </PasswordBox>
-        <Button x:Name="loginButton" Content="Sign Up" HorizontalAlignment="Left" Margin="35,213,0,0" VerticalAlignment="Top" Height="27" Width="60" Foreground="White" BorderBrush="White">
+        <Button x:Name="loginButton" Content="Sign Up" HorizontalAlignment="Left" Margin="35,213,0,0" VerticalAlignment="Top" Height="27" Width="60" Foreground="White" BorderBrush="White" Click="loginButton_Click">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
+        <Label x:Name="error1" Content="" HorizontalAlignment="Left" Margin="172,119,0,0" VerticalAlignment="Top" Height="24" Width="98" Foreground="Red" FontFamily="Yu Gothic Medium" FontSize="8" RenderTransformOrigin="0.499,0.51"/>
+        <Label x:Name="error2" Content="" HorizontalAlignment="Left" Margin="172,172,0,0" VerticalAlignment="Top" Height="24" Width="98" Foreground="Red" FontFamily="Yu Gothic Medium" FontSize="8" RenderTransformOrigin="0.505,0.466"/>
     </Grid>
 </Window>
