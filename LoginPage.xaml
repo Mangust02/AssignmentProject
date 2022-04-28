@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AssignmentProject"
         mc:Ignorable="d"
-        Title="LoginPage" Height="410" Width="580">
+        Title="LoginPage" Height="410" Width="580" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid Height="400" VerticalAlignment="Top">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="D:\pos\ass\AssignmentProject\img\loginpage.jpg"

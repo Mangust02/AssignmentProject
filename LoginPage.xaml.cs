@@ -36,7 +36,6 @@ namespace AssignmentProject
 
             if(string.IsNullOrEmpty(username))
             {
-               // MessageBox.Show("Username and Password are required");
                error1.Visibility = Visibility.Visible;
                 error1.Content = "*Username is required";
             }else if (string.IsNullOrEmpty(password)){ 
@@ -54,8 +53,20 @@ namespace AssignmentProject
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                MessageBox.Show("Login Success");
-            }
+                if (reader[3].ToString() == "Admin")
+                {
+                    AdminPage admin = new AdminPage();
+                    admin.Show();
+                    this.Close();
+                } 
+                else if(reader[3].ToString() == "Employee")
+                {
+                    EmployeePage employee = new EmployeePage();
+                    employee.Show();
+                    this.Close();
+                }
+            } 
+            
             else
             {
                 MessageBox.Show("Username or Password incorrect");
