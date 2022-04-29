@@ -23,5 +23,10 @@ namespace AssignmentProject
         {
             InitializeComponent();
         }
+
+        private void Products(object sender, TextCompositionEventArgs e)
+        {
+
+        }
     }
 }

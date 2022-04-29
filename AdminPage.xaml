@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="AdminPage" Height="450" Width="800">
     <Grid>
-
+        <Image Margin="46,0,533,343" Source="/img/logotip-company.png" Stretch="Fill"/>
+        <StackPanel Background="#FFF7773C" Margin="46,96,533,291"/>
+        <StackPanel Background="#FFF7773C" Margin="46,168,533,218"/>
+        <StackPanel Background="#FFF7773C" Margin="46,236,533,151"/>
+        <Image Margin="46,236,711,151" Source="/img/report-logo.png" Stretch="Fill"/>
+        <StackPanel Background="#FFF7773C" Margin="46,309,533,78"/>
+        <Image Margin="48,312,713,81" Source="/img/password-logo.png" Stretch="Fill"/>
+        <Image Margin="46,96,711,291" Source="/img/product-logo.jpg" Stretch="Fill"/>
+        <Image Margin="46,168,711,218" Source="/img/employee-logo.jpg" Stretch="Fill"/>
+        <Label Content="Products" HorizontalAlignment="Left" Margin="89,96,0,0" VerticalAlignment="Top" Height="47" Width="178" FontSize="24" Foreground="White"/>
+        <Label Content="Employee" HorizontalAlignment="Left" Margin="89,169,0,0" VerticalAlignment="Top" Height="47" Width="178" Foreground="White" FontSize="22"/>
+        <Label Content="Report" HorizontalAlignment="Left" Margin="89,236,0,0" VerticalAlignment="Top" Height="47" Width="178" Foreground="White" FontSize="22"/>
+        <Label Content="Change Password" HorizontalAlignment="Left" Margin="96,309,0,0" VerticalAlignment="Top" Height="47" Width="171" Foreground="White" FontSize="20"/>
+        <Frame x:Name="Main" Content="" Margin="290,10,24,28"/>
     </Grid>
 </Window>
