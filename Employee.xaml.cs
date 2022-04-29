@@ -30,12 +30,34 @@ namespace AssignmentProject
 
         private void employee_Add_Click(object sender, RoutedEventArgs e)
         {
-            Connect.conn.Open();
-            String add_query = "INSERT INTO Admin(AdminID, AdminUsername,Qualification,Password) VALUES("+employee_ID.Text+", '"+employee_Name.Text+"','"+ employee_Qualification+"','"+employee_Password.Text+"')";
-            SqlCommand cmd = new SqlCommand(add_query,Connect.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Record Saved");
+            try
+            {
+                Connect.conn.Open();
+                String query = "SELECT * FROM Admin WHERE AdminID=" + employee_ID.Text;
+                SqlCommand q_cmd = new SqlCommand(query, Connect.conn);
+                SqlDataReader dr = q_cmd.ExecuteReader();
 
+                if (dr.Read())
+                {
+                    MessageBox.Show("EmployeeID already exists");
+                }
+                else
+                {
+                    String add_query = "INSERT INTO Admin(AdminID, AdminUsername,Qualification,Password,Role) VALUES(" + employee_ID.Text + ", '" + employee_Name.Text + "','" + employee_Qualification.Text + "','" + employee_Password.Text + "')";
+                    SqlCommand cmd = new SqlCommand(add_query, Connect.conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record Saved");
+                }
+
+            }catch (SqlException ex)
+            {
+                MessageBox.Show(""+ex);
+            }
+            finally
+            {
+                Connect.conn.Close();
+            }
+            
 
         }
     }
