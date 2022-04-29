@@ -5,22 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AssignmentProject"
         mc:Ignorable="d"
-        Title="AdminPage" Height="450" Width="800">
+        Title="AdminPage" Height="410" Width="580"  WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
 
-        <Image Margin="33,0,533,343" Source="/img/logotip-company.png" Stretch="Fill"/>
+        <Image Margin="10,10,338,301" Source="/img/logotip-company.png" Stretch="Fill"/>
 
-        <Button x:Name="productButton" Margin="29,104,535,279" Background="#FFF7773D" Content="Products" FontSize="20"/>
+        <Button x:Name="productButton" Margin="16,109,344,257" Background="#FFF7773D" Content="Products" FontSize="20" Foreground="White" Click="productButton_Click_1"/>
 
 
-        <Button  x:Name="employeeButton" Margin="29,168,535,217" Background="#FFF7773D" Content="Employee" FontSize="20" Click="showEmployee_Click"/>
+        <Button  x:Name="employeeButton" Margin="16,166,344,200" Background="#FFF7773D" Content="Employee" FontSize="20" Foreground="White" Click="showEmployee_Click"/>
 
-        <Button x:Name="reportButton" Margin="29,230,535,154" Background="#FFF7773D" Content="Report" FontSize="20"/>
+        <Button x:Name="reportButton" Margin="16,227,344,141" Background="#FFF7773D" Content="Report" FontSize="20" Foreground="White"/>
 
-        <Button x:Name="passwordButton" Margin="29,294,535,88" Background="#FFF7773D" Content="Change Password" FontSize="20"/>
+        <Button x:Name="passwordButton" Margin="16,285,344,79" Background="#FFF7773D" Content="Change Password" FontSize="20" Foreground="White"/>
 
-        <Button x:Name="logoutButton" Margin="31,357,533,25" Background="#FFF7773D" Content="Log out" FontSize="20"/>
+        <Button x:Name="logoutButton" Margin="16,347,344,25" Background="#FFF7773D" Content="Log out" FontSize="20" Foreground="White"/>
 
-        <Frame x:Name="Main" Margin="289,10,24,25"/>
+        <Frame x:Name="Main" Margin="260,25,24,25" Width="280" Height="360"/>
     </Grid>
 </Window>

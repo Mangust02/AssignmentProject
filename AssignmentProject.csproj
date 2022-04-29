@@ -12,6 +12,7 @@
     <None Remove="img\logotip-company.png" />
     <None Remove="img\password-logo.png" />
     <None Remove="img\report-logo.png" />
+    <None Remove="product1.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +24,7 @@
     <Resource Include="img\logotip-company.png" />
     <Resource Include="img\password-logo.png" />
     <Resource Include="img\report-logo.png" />
+    <Resource Include="product1.jpg" />
   </ItemGroup>
 
 </Project>

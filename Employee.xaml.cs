@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace AssignmentProject
 {
@@ -23,6 +24,19 @@ namespace AssignmentProject
         public Employee()
         {
             InitializeComponent();
+            Connect connect = new Connect();
+            connect.setConnection();
+        }
+
+        private void employee_Add_Click(object sender, RoutedEventArgs e)
+        {
+            Connect.conn.Open();
+            String add_query = "INSERT INTO Admin(AdminID, AdminUsername,Qualification,Password) VALUES("+employee_ID.Text+", '"+employee_Name.Text+"','"+ employee_Qualification+"','"+employee_Password.Text+"')";
+            SqlCommand cmd = new SqlCommand(add_query,Connect.conn);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Record Saved");
+
+
         }
     }
 }

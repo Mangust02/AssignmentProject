@@ -33,5 +33,10 @@ namespace AssignmentProject
         {
             Main.Content = new Employee();
         }
+
+        private void productButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Products();
+        }
     }
 }

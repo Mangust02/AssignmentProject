@@ -25,8 +25,8 @@ namespace AssignmentProject
         public LoginPage()
         {
             InitializeComponent();
-            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\pos\ass\AssignmentProject\PosAssignment.mdf;Integrated Security=True");
-            
+            Connect connect = new Connect();
+            connect.setConnection();
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
@@ -47,9 +47,9 @@ namespace AssignmentProject
                 error1.Visibility = Visibility.Hidden;
                 error2.Visibility= Visibility.Hidden;
             }
-            conn.Open();
+            Connect.conn.Open();
             String query = "SELECT * FROM Admin where AdminID = " + username + "and Password='" + password + "'" ;
-            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlCommand cmd = new SqlCommand(query, Connect.conn);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
@@ -71,7 +71,7 @@ namespace AssignmentProject
             {
                 MessageBox.Show("Username or Password incorrect");
             }
-            conn.Close();
+            Connect.conn.Close();
         }
     }
 }
