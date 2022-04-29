@@ -8,7 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\employee-logo.jpg" />
+    <None Remove="img\logotip-company.png" />
+    <None Remove="img\password-logo.png" />
+    <None Remove="img\report-logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\employee-logo.jpg" />
+    <Resource Include="img\logotip-company.png" />
+    <Resource Include="img\password-logo.png" />
+    <Resource Include="img\report-logo.png" />
   </ItemGroup>
 
 </Project>

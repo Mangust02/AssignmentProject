@@ -10,28 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AssignmentProject
 {
     /// <summary>
-    /// Interaction logic for AdminPage.xaml
+    /// Interaction logic for Products.xaml
     /// </summary>
-    public partial class AdminPage : Window
+    public partial class Products : Page
     {
-        public AdminPage()
+        public Products()
         {
             InitializeComponent();
-        }
-
-        private void Products(object sender, TextCompositionEventArgs e)
-        {
-
-        }
-
-        private void showEmployee_Click(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Employee();
         }
     }
 }
