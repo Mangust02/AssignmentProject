@@ -24,11 +24,6 @@ namespace AssignmentProject
             InitializeComponent();
         }
 
-        private void Products(object sender, TextCompositionEventArgs e)
-        {
-
-        }
-
         private void showEmployee_Click(object sender, RoutedEventArgs e)
         {
             Main.Content = new Employee();
@@ -37,6 +32,13 @@ namespace AssignmentProject
         private void productButton_Click_1(object sender, RoutedEventArgs e)
         {
             Main.Content = new Products();
+        }
+
+        private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Close();
         }
     }
 }

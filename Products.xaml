@@ -28,13 +28,13 @@
         <Label Content="Name" HorizontalAlignment="Left" Margin="150,3,0,0" VerticalAlignment="Top" Height="19" Width="37" FontSize="8"/>
         <Label Content="Author" HorizontalAlignment="Left" Margin="150,49,0,0" VerticalAlignment="Top" Height="21" Width="41" FontSize="8"/>
         <Label Content="Price" HorizontalAlignment="Left" Margin="150,87,0,0" VerticalAlignment="Top" Height="20" Width="37" FontSize="8"/>
-        <Button Content="ADD" HorizontalAlignment="Left" Height="27" Margin="150,190,0,0" VerticalAlignment="Top" Width="109" BorderBrush="#FFF7773D" Foreground="White" FontSize="14" Background="#FFF8AF8F"/>
+        <Button x:Name="insertToDb" Content="ADD" HorizontalAlignment="Left" Height="27" Margin="150,190,0,0" VerticalAlignment="Top" Width="109" BorderBrush="#FFF7773D" Foreground="White" FontSize="14" Background="#FFF8AF8F" Click="insertToDb_Click"/>
         <Label Content="Quantity" HorizontalAlignment="Left" Margin="150,129,0,0" VerticalAlignment="Top" Height="22" Width="109" FontSize="8"/>
-        <TextBox HorizontalAlignment="Left" Margin="150,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Height="20" Text="" BorderBrush="#FFF7773D"/>
-        <TextBox HorizontalAlignment="Left" Margin="150,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Height="20" Text="" BorderBrush="#FFF7773D"/>
-        <TextBox HorizontalAlignment="Left" Margin="150,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Height="20" Text="" BorderBrush="#FFF7773D"/>
-        <TextBox HorizontalAlignment="Left" Margin="150,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Height="20" Text="" BorderBrush="#FFF7773D"/>
-        <Button x:Name="imageLoad" Content="Load Picture" HorizontalAlignment="Left" Margin="12,190,0,0" VerticalAlignment="Top" Height="27" Width="128" BorderBrush="#FFF7773D" Background="#FFF8AF8F" Foreground="White" FontSize="14" Click="imageLoad_Click"/>
+        <TextBox x:Name="product_Name" HorizontalAlignment="Left" Margin="150,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Height="20" Text="" BorderBrush="#FFF7773D"/>
+        <TextBox x:Name="product_Author" HorizontalAlignment="Left" Margin="150,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Height="20" Text="" BorderBrush="#FFF7773D"/>
+        <TextBox x:Name="product_Price" HorizontalAlignment="Left" Margin="150,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Height="20" Text="" BorderBrush="#FFF7773D"/>
+        <TextBox x:Name="product_Quantity" HorizontalAlignment="Left" Margin="150,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Height="20" Text="" BorderBrush="#FFF7773D"/>
+        <Button x:Name="imageLoad" Content="Load Picture" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Height="27" Width="128" BorderBrush="#FFF7773D" Background="#FFF8AF8F" Foreground="White" FontSize="14" Click="imageLoad_Click"/>
         <TextBox x:Name="pathTextBox" Visibility="Hidden" HorizontalAlignment="Left" Margin="12,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="9" Height="11"/>
 
     </Grid>

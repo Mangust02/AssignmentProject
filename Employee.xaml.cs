@@ -32,33 +32,78 @@ namespace AssignmentProject
         {
             try
             {
-                Connect.conn.Open();
-                String query = "SELECT * FROM Admin WHERE AdminID=" + employee_ID.Text;
-                SqlCommand q_cmd = new SqlCommand(query, Connect.conn);
-                SqlDataReader dr = q_cmd.ExecuteReader();
+                string AdminID = employee_ID.Text;
+                string AdminUsername = employee_Name.Text;
+                string Role = employee_Role.Text;
+                string Password = employee_Password.Text;
 
-                if (dr.Read())
+                if (string.IsNullOrEmpty(AdminID) || string.IsNullOrEmpty(AdminUsername) || string.IsNullOrEmpty(Role) ||  string.IsNullOrEmpty(Password)) 
                 {
-                    MessageBox.Show("EmployeeID already exists");
+                    MessageBox.Show("Please, fill in all the required fields");
                 }
                 else
                 {
-                    String add_query = "INSERT INTO Admin(AdminID, AdminUsername,Qualification,Password,Role) VALUES(" + employee_ID.Text + ", '" + employee_Name.Text + "','" + employee_Qualification.Text + "','" + employee_Password.Text + "')";
-                    SqlCommand cmd = new SqlCommand(add_query, Connect.conn);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Record Saved");
+                    Connect.conn.Open();
+                    String ie_query = "INSERT INTO Admin(AdminID, AdminUsername, Role, Password) VALUES('" + employee_ID.Text + "', '" + employee_Name.Text + "', '" + employee_Role.Text + "', '" + employee_Password.Text + "') ";
+                    SqlCommand ee_cmd = new SqlCommand(ie_query, Connect.conn);
+                    ee_cmd.ExecuteNonQuery();
+                    MessageBox.Show("The record has been successfully Inserted");
                 }
-
-            }catch (SqlException ex)
+            }
+            catch (SqlException ex)
             {
-                MessageBox.Show(""+ex);
+                MessageBox.Show("" + ex);
             }
             finally
             {
                 Connect.conn.Close();
             }
-            
 
+
+        }
+
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Connect.conn.Open();
+                String de_query = "DELETE FROM Admin WHERE AdminId=" + employee_ID.Text;
+                SqlCommand de_cmd = new SqlCommand(de_query, Connect.conn);
+                de_cmd.ExecuteNonQuery();
+                MessageBox.Show("The record has been successfully Deleted");
+               // clear();
+               // loadData();
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+            finally
+            {
+                Connect.conn.Close();
+            }
+        }
+
+        private void updateButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Connect.conn.Open();
+                String ue_query = "UPDATE Admin SET AdminUsername= '" + employee_Name.Text + "', Role= '" + employee_Role.Text + "', Password= '" + employee_Password.Text + "' WHERE AdminId=" + employee_ID.Text;
+                SqlCommand ue_cmd = new SqlCommand(ue_query, Connect.conn);
+                ue_cmd.ExecuteNonQuery();
+                MessageBox.Show("The record has been successfully Updated");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+            finally
+            {
+                Connect.conn.Close();
+            }
         }
     }
 }

@@ -15,11 +15,9 @@
 
         <Button  x:Name="employeeButton" Margin="16,166,344,200" Background="#FFF7773D" Content="Employee" FontSize="20" Foreground="White" Click="showEmployee_Click"/>
 
-        <Button x:Name="reportButton" Margin="16,227,344,141" Background="#FFF7773D" Content="Report" FontSize="20" Foreground="White"/>
 
-        <Button x:Name="passwordButton" Margin="16,285,344,79" Background="#FFF7773D" Content="Change Password" FontSize="20" Foreground="White"/>
 
-        <Button x:Name="logoutButton" Margin="16,347,344,25" Background="#FFF7773D" Content="Log out" FontSize="20" Foreground="White"/>
+        <Button x:Name="logoutButton" Margin="16,347,344,25" Background="#FFF7773D" Content="Log out" FontSize="20" Foreground="White" Click="logoutButton_Click"/>
 
         <Frame x:Name="Main" Margin="260,25,24,25" Width="280" Height="360"/>
     </Grid>

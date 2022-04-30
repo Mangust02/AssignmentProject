@@ -9,16 +9,17 @@
       Title="Employee">
 
     <Grid>
-        <Label Content="       Employee ID" HorizontalAlignment="Left" Height="41" Margin="10,5,0,0" VerticalAlignment="Top" Width="254" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Employee ID" HorizontalAlignment="Left" Height="41" Margin="10,5,0,0" VerticalAlignment="Top" Width="254" FontSize="22" FontWeight="Bold"/>
         <TextBox x:Name="employee_ID" HorizontalAlignment="Left" Margin="14,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="24" Background="{x:Null}" BorderBrush="#FFF7773D" BorderThickness="2,2,2,2"/>
-        <Label Content="              Name" HorizontalAlignment="Left" Height="37" Margin="10,75,0,0" VerticalAlignment="Top" Width="254" FontSize="22" FontWeight="Bold"/>
-        <Label Content="           Qualification" HorizontalAlignment="Left" Height="41" Margin="10,146,0,0" VerticalAlignment="Top" Width="254" FontSize="22" FontWeight="Bold"/>
-        <Label Content="            Password" HorizontalAlignment="Left" Height="41" Margin="10,220,0,0" VerticalAlignment="Top" Width="254" FontSize="22" FontWeight="Bold"/>
-        <Button x:Name="employee_Delete" Content="DELETE" HorizontalAlignment="Left" Margin="157,301,0,0" VerticalAlignment="Top" Height="31" Width="95" BorderBrush="#FFF7773D" Background="#FFF7773D" Foreground="White"/>
-        <Button x:Name="employee_Add" Content="ADD" HorizontalAlignment="Left" Margin="14,301,0,0" VerticalAlignment="Top" Height="31" Width="95" BorderBrush="#FFF7773D" Background="#FFF7773D" Foreground="White" Click="employee_Add_Click"/>
+        <Label Content="Name" HorizontalAlignment="Left" Height="37" Margin="10,75,0,0" VerticalAlignment="Top" Width="254" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Role" HorizontalAlignment="Left" Height="41" Margin="10,146,0,0" VerticalAlignment="Top" Width="254" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="41" Margin="10,220,0,0" VerticalAlignment="Top" Width="254" FontSize="22" FontWeight="Bold"/>
+        <Button x:Name="employee_Add" Content="ADD" HorizontalAlignment="Left" Margin="14,301,0,0" VerticalAlignment="Top" Height="31" Width="78" BorderBrush="#FFF7773D" Background="#FFF7773D" Foreground="White" Click="employee_Add_Click"/>
         <TextBox  x:Name="employee_Name" HorizontalAlignment="Left" Margin="14,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="24" Background="{x:Null}" BorderBrush="#FFF7773D" BorderThickness="2,2,2,2"/>
-        <TextBox  x:Name="employee_Qualification" HorizontalAlignment="Left" Margin="14,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="24" Background="{x:Null}" BorderBrush="#FFF7773D" BorderThickness="2,2,2,2"/>
+        <TextBox  x:Name="employee_Role" HorizontalAlignment="Left" Margin="14,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="24" Background="{x:Null}" BorderBrush="#FFF7773D" BorderThickness="2,2,2,2"/>
         <TextBox  x:Name="employee_Password" HorizontalAlignment="Left" Margin="14,261,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="24" Background="{x:Null}" BorderBrush="#FFF7773D" BorderThickness="2,2,2,2"/>
+        <Button x:Name="updateButton" Content="UPDATE" HorizontalAlignment="Center" Margin="0,301,0,0" VerticalAlignment="Top" Height="31" Width="78" BorderBrush="#FFF7773D" Background="#FFF7773D" Foreground="White" Click="updateButton_Click"/>
+        <Button x:Name="deleteButton" Content="DELETE" HorizontalAlignment="Left" Margin="192,301,0,0" VerticalAlignment="Top" Height="31" Width="78" BorderBrush="#FFF7773D" Background="#FFF7773D" Foreground="White" Click="deleteButton_Click"/>
 
     </Grid>
 </Page>

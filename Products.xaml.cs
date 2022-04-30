@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -58,6 +59,21 @@ namespace AssignmentProject
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void insertToDb_Click(object sender, RoutedEventArgs e)
+        {
+            String fullpath = System.IO.Path.GetFullPath("PosAssignment.mdf");
+            String path = fullpath.Substring(0, fullpath.IndexOf("bin"));
+            Connect.str = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + "PosAssignment.mdf;Integrated Security=True";
+            Connect.conn = new SqlConnection(Connect.str);
+            Connect.conn.ConnectionString = Connect.str;
+            Connect.conn.Open();
+                    String add_query = "INSERT INTO product_table(name, author, price, quantity, image) VALUES('" + product_Name.Text + "', '" + product_Author.Text + "','" + product_Price.Text + "','" + product_Quantity.Text + "', '/images/Products/" + NameofFile.changedFileName + "')";
+                    SqlCommand cmd = new SqlCommand(add_query, Connect.conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record Saved");
+
         }
     }
 }

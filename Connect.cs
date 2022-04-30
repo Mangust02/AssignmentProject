@@ -7,12 +7,17 @@ using System.Data.SqlClient;
 
 namespace AssignmentProject
 {
-     class Connect
+    class Connect
     {
         public static SqlConnection conn;
+        public static String str;
         public void setConnection()
         {
-         conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\pos\ass\AssignmentProject\PosAssignment.mdf;Integrated Security=True");
+            String fullpath = System.IO.Path.GetFullPath("PosAssignment.mdf");
+            String path = fullpath.Substring(0, fullpath.IndexOf("bin"));
+            str = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + "PosAssignment.mdf;Integrated Security=True";
+            conn = new SqlConnection(str);
+            conn.ConnectionString = str;
         }
     }
 }
